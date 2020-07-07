@@ -19,7 +19,7 @@ RUN set -eux; apt-get update; \
 
 #
 # copy configuation files
-COPY .m1k1o/files/chromium/supervisord.conf /etc/neko/supervisord/chromium.conf
-COPY .m1k1o/files/chromium/preferences.json /usr/share/chromium/master_preferences
-COPY .m1k1o/files/chromium/policies.json /etc/chromium/policies/managed/policies.json
-COPY .m1k1o/files/chromium/openbox.xml /etc/neko/openbox.xml
+COPY .m1k1o/chromium/supervisord.conf /etc/neko/supervisord/chromium.conf
+COPY .m1k1o/chromium/preferences.json /usr/share/chromium/master_preferences
+COPY .m1k1o/chromium/policies.json /etc/chromium/policies/managed/policies.json
+COPY .m1k1o/chromium/openbox.xml /etc/neko/openbox.xml
