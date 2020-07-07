@@ -4,10 +4,10 @@ services:
     build: .m1k1o/chromium
     container_name: neko_chromium
     restart: always
-    shm_size: "3gb"
+    shm_size: "1gb"
     ports:
-      - "3005:8080"
-      - "52000-52010:52000-52010/udp"
+      - "80:8080"
+      - "59000-59100:59000-59100/udp"
     cap_add:
       - SYS_ADMIN
     environment:
@@ -16,5 +16,5 @@ services:
       NEKO_PASSWORD: neko
       NEKO_PASSWORD_ADMIN: admin
       NEKO_BIND: :8080
-      NEKO_EPR: 52000-52010
+      NEKO_EPR: 59000-59100
       NEKO_NAT1TO1: 192.168.1.20
